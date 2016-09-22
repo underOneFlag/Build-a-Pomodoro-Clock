@@ -5,17 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Build a Pomodoro Clock</title>
   <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
-  <header></header>
-  <main>
-    <section>
-      
-    </section>
-  </main>
+  <h1>FreeCodeCamp</h1>
+  <section>
+    <div id="break" class="timer">
+      <p>BREAK LENGTH</p>
+      <button>-</button>
+      <span>2</span>
+      <button>+</button>
+    </div>
+    <div id="session" class="timer">
+      <p>SESSION LENGTH</p>
+      <button>-</button>
+      <span>1</span>
+      <button>+</button>
+    </div>
+    <div id="clock">
+      <p id="activity">Session</p>
+      <p id="countdown">25</p>
+    </div>
+  </section>
   <footer>
     <p><a href="https://codepen.io/FreeCodeCamp/full/aNyxXR/" target="_blank">Original</a> created by <a href="https://codepen.io/FreeCodeCamp/" target="_blank">FreeCodeCamp</a>.</p>
     <p>Recreated for learning by <a href="https://www.freecodecamp.com/underoneflag" target="_blank">underOneFlag</a></p>
+    <p>This page uses these sounds from <a href="https://www.freesound.org" target="_blank">freesound</a>:<br /><a href="https://www.freesound.org/people/jordivburgel/sounds/217343/" target="_blank">Warhorn</a> by <a href="https://www.freesound.org/people/jordivburgel/" target="_blank">jordivburgel</a><br /><a href="https://www.freesound.org/people/juskiddink/sounds/74893/" target="_blank">Bell jingle 2</a> by <a href="https://www.freesound.org/people/juskiddink/" target="_blank">juskiddink</a></p>
+    <audio id="break-end" src="audio/warhorn.mp3" type="audio/mp3"></audio>
+    <audio id="break-start" src="audio/bell_jingle_2.mp3" type="audio/mp3"></audio>
   </footer>
   <script src="main.js"></script>
 </body>

@@ -11,21 +11,35 @@ html, body {
 
 body {
     background-color: #333;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
     text-align: center;
+    display: table;
 }
 
-main {
-    width: 530px;
-    height: 530px;
-    background-color: #aaa;
-    margin: auto;
-    margin-top: 40px;
-    border-radius: 4px;
+body > *:not(script) {
+    display: table-row;
+}
+
+h1 {
+    font-size: 80px;
+    color: white;
+    font-family: Pacifico;
+    display: inline;
 }
 
 section {
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 20px;
+    height: 100%;
+}
 
+.timer {
+    font-size: 12px;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0 22px;
 }
 
 button {
@@ -33,20 +47,70 @@ button {
     border-radius: 3px;
     outline: none;
     border: none;
+    background: none;
+    color: white;
+    font-size: 26px;
+    height: 45px;
+    width: 35px;
+    padding-top: 7px;
 }
 
-button:hover {
-    -webkit-filter: brightness(120%);
-    filter: brightness(120%);
+span {
+    font-size: 30px;
+    height: 45px;
+    line-height: 45px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+#clock {
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    margin-top: 20px;
+    display: table;
+    font-size: 48px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    margin-bottom: 20px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAMSURBVBhXY1Da6AMAAhgBIOLgkG8AAAAASUVORK5CYII=);
+    background-size: 290px 0px;
+    background-repeat: repeat-x;
+    background-position: center bottom;
+}
+
+#clock.break {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAMSURBVBhXY3growIAAycBLhVrvukAAAAASUVORK5CYII=);
+}
+
+#clock:before {
+    content: '';
+    position: absolute;
+    width: 296px;
+    height: 296px;
+    left: 0;
+    margin: -5px;
+    border-radius: 50%;
+    z-index: -1;
+    border: 2px #8dbc25 solid;
+}
+
+#clock >  p {
+    line-height: 145px;
 }
 
 footer {
     margin-top: 20px;
     color: white;
+    height: 1px;
+    height: 3em;
 }
 
 footer p {
-    /*font-size: 13px;*/
+    font-size: 12px;
+    color: #ccc;
 }
 
 a {
@@ -56,4 +120,16 @@ a {
 
 a:visited {
     color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 66px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    h1 {
+        font-size: 46px;
+    }
 }
